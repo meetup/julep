@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 			}
 		},
 		'clean': {
-		  css: ["scss/*.css", "!scss/*.scss"]
+			css: ["scss/*.css", "scss/*.css.map", "!scss/*.scss"]
 		}
 	});
 
