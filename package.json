@@ -1,10 +1,10 @@
 {
-	"name": "yeti",
+	"name": "julep",
 	"version": "0.0.0",
-	"description": "Meetup Sass Utilities",
+	"description": "Sass utility add-on for Bourbon",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/meetup/yeti.git"
+		"url": "git://github.com/meetup/julep.git"
 	},
 	"devDependencies": {
 		"bower": "1.4.1",
@@ -15,7 +15,7 @@
 		"grunt-contrib-clean": "0.6.0"
 	},
 	"bugs": {
-		"url": "https://github.com/meetup/sassquatch2/issues"
+		"url": "https://github.com/meetup/julep/issues"
 	},
 	"author": "adamd@meetup.com",
 	"license": "MIT"
