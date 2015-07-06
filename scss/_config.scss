@@ -1,3 +1,8 @@
+////
+/// Configuration variables
+/// @group config
+////
+
 // ---------------------------
 // BREAKPOINTS
 // ---------------------------
@@ -12,3 +17,11 @@
 		l: $breakpoint-l,
 		xl: $breakpoint-xl,
 	);
+
+
+// ---------------------------
+// BRIGHTNESS
+// ---------------------------
+	$brightness_threshold: 160;
+	$C_contrastDarkBG: #fff;
+	$C_contrastLightBG: #000;

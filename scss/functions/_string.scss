@@ -1,49 +1,35 @@
-/*doc
----
-title: String utils
-name: string
-category: Sass Utils | Functions
----
-*/
-
-
-/*doc
----
-title: str-firstCharToUpper
-name: str-firstCharToUpper
-parent: string
----
-Capitalizes first letter of a given string. Useful as a camelCase converter.
-
-_returns string_
-
-```
-str-firstCharToUpper('snowflake') // -> 'Snowflake'
-
-.special#{str-firstCharToUpper('snowflake')} // -> .specialSnowflake
-```
-*/
+/// Capitalize first character in string
+/// @access public
+/// @group String
+///
+/// @param {String} $string - string to capitalize
+/// @returns {String} capitalized string
+///
+/// @example scss - Capitalize function
+/// 	str-firstCharToUpper('snowflake') // -> 'Snowflake'
+/// 	.special#{str-firstCharToUpper('snowflake')} // -> .specialSnowflake
+///
 @function str-firstCharToUpper( $string ) {
 	@return #{to-upper-case(str-slice($string, 1, 1))}#{str-slice($string, 2, -1)};
 }
 
 
-/*doc
----
-title: str-replace
-name: str-replace
-parent: string
----
-Search and replace on strings.
-
-_returns string_
-
-```
-str-replace('inline-block', '-', '') // -> 'inlineblock'
-
-.display--#{str-replace('inline-block', '-block', 'Block')} -> .display--inlineBlock
-```
-*/
+/// Find and replace substring in a given string
+/// @access public
+/// @group String
+///
+/// @param {String} $string - string to search
+/// @param {String} $search - substring to search in $string
+/// @param {String} $replace [''] - replacement substring
+/// @returns {String}
+///
+/// @example scss - String replace
+/// 	str-replace('inline-block', '-', '')
+/// 	// -> 'inlineblock'
+///
+/// 	.display--#{str-replace('inline-block', '-block', 'Block')}
+/// 	// -> .display--inlineBlock
+///
 @function str-replace($string, $search, $replace: '') {
 	$index: str-index($string, $search);
 	@if str-index($string, $search) {
