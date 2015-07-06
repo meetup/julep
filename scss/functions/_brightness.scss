@@ -1,7 +1,10 @@
+////
+/// @group brightness
+////
+
 /// Gets brightness for additive (screen-based) color,
 /// returning a value between 0-255 representing brightness
 /// @access private
-/// @group Brightness
 ///
 /// @param {color} $color - RGB, RGBA, HSL, or hex color value
 /// @returns {Number} 0-255 (0 is darkest, 255 is lightest)
@@ -21,7 +24,6 @@
 
 /// Tests if color is dark
 /// @access public
-/// @group Brightness
 ///
 /// @requires {function} getPerceivedBrightness
 ///
@@ -40,7 +42,6 @@
 
 /// Tests if color is light
 /// @access public
-/// @group Brightness
 ///
 /// @requires {function} getPerceivedBrightness
 ///
@@ -80,7 +81,6 @@ color: getPrimaryTextColor(#FFF);
 
 /// Selects a contrasting `color` for a given background color
 /// @access public
-/// @group Brightness
 ///
 /// @requires {function} isDark
 ///

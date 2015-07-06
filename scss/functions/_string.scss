@@ -1,6 +1,9 @@
+////
+/// @group string
+////
+
 /// Capitalize first character in string
 /// @access public
-/// @group String
 ///
 /// @param {String} $string - string to capitalize
 /// @returns {String} capitalized string
@@ -16,7 +19,6 @@
 
 /// Find and replace substring in a given string
 /// @access public
-/// @group String
 ///
 /// @param {String} $string - string to search
 /// @param {String} $search - substring to search in $string

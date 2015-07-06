@@ -1,47 +1,30 @@
-/*doc
----
-title: Background Utilities
-name: background
-category: Sass Utils | Mixins & Placeholders
----
-*/
+////
+/// @group background
+////
 
 
-
-/*doc
----
-title: Background clip mixin
-name: backgroundClip
-parent: background
----
-Sets background-clip property
-
-```
-@include background-clip($value: padding);
-@include background-clip('border');
-```
-*/
+/// Sets background-clip property
+/// @access public
+///
+/// @param {Value} $value - valid background-clip value
+/// @output vendor-prefixed background-clip rule
+///
+/// @example
+/// 	@include background-clip($value: padding);
+/// 	@include background-clip('border');
+///
 @mixin background-clip($value:padding){
 	@include prefixer(background-clip, $value, $prefixes);
 }
 
 
-/*doc
----
-title: Image fill placeholder
-name: imgFill
-parent: background
----
-Sets background properties that center
-background image, set size to 'cover',
-and overflow hidden.
-
-_[ie. avatars][avatar]_
-
-```
-@extend %imgFill;
-```
-*/
+/// Sets background properties that center a background image,
+/// set size to `cover`, and `overflow` to `hidden`
+/// @access public
+///
+/// @example
+/// 	@extend %imgFill;
+///
 %imgFill {
   background-repeat: no-repeat;
   background-position: center;

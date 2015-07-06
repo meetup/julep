@@ -1,25 +1,15 @@
-/*doc
----
-title: Float utils
-name: float
-category: Sass Utils | Mixins & Placeholders
----
-*/
+////
+/// @group float
+////
 
 
-
-/*doc
----
-title: Clearfix placeholder
-name: clearfix
-parent: float
----
-Clears floated children.
-
-```
-@extend %clearfix;
-```
-*/
+/// Clears floated children
+/// @access public
+///
+/// @example scss
+/// 	.parentWithFloatedChildren {
+/// 		@extend %clearfix;
+/// 	}
 %clearfix {
 	&:before,
 	&:after {

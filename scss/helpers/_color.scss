@@ -1,23 +1,19 @@
-/*doc
----
-title: Color
-name: colorUtil
-category: Sass Utils | Mixins & Placeholders
----
-*/
+////
+/// @group color
+////
 
-/*doc
----
-title: SVG color
-name: svgColorMixin
-parent: colorUtil
----
-Sets properties to color SVG icons
 
-```
-@mixin color-svg($color: black);
-```
-*/
+/// Sets properties to color SVG icons
+/// @access public
+///
+/// @param {color} $color - keyword, hex, rgba, rgb, or hsl color
+/// @param {Boolean} $isImportant
+///
+/// @example scss
+/// 	.someSVG {
+/// 		@include color-svg(pink);
+/// 	}
+///
 @mixin color-svg($color: black, $isImportant:false) {
 	stroke: transparent;
 	@if $isImportant {
@@ -27,19 +23,18 @@ Sets properties to color SVG icons
 	}
 };
 
-/*doc
----
-title: SVG + Text color
-name: colorAllMixin
-parent: colorUtil
----
-Sets properties to apply color to SVG icons
-_and_ text.
 
-```
-@mixin color-all($color: black);
-```
-*/
+/// Sets properties to color SVG icons AND text
+/// @access public
+///
+/// @param {color} $color - keyword, hex, rgba, rgb, or hsl color
+/// @param {Boolean} $isImportant
+///
+/// @example scss
+/// 	.someSVG {
+/// 		@include color-all(black);
+/// 	}
+///
 @mixin color-all($color: black, $isImportant:false) {
 	@include color-svg($color, $isImportant);
 	@if $isImportant {
@@ -48,5 +43,3 @@ _and_ text.
 		color: $color;
 	}
 };
-
-
