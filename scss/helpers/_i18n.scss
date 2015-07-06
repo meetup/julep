@@ -4,6 +4,10 @@
 
 /// Filter style rules to a specific language or set of languages
 /// using classes applied to the `body` element of a document
+///
+/// _i18n helpers assume your document has a "lang_{lang}" class on
+/// the "body" element._
+///
 /// @access public
 ///
 /// @param {String | String...} $langs - ISO 639-1 language codes (ie. 'en')
@@ -31,6 +35,10 @@
 
 /// Excludes styles from a specific language or set of languages
 /// using classes applied to the `body` element of a document
+///
+/// _i18n helpers assume your document has a "lang_{lang}" class on
+/// the "body" element._
+///
 /// @access public
 ///
 /// @param {String | String...} $langs - ISO 639-1 language codes (ie. 'en')
