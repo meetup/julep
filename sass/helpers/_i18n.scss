@@ -22,7 +22,7 @@
 ///
 @mixin i18n-only($langs...) {
 	@each $lang in $langs {
-		$class: map-get($languageClasses, $lang);
+		$class: map-get($root-language-map, $lang);
 
 		@if $class {
 			#{$class} & {
@@ -53,7 +53,7 @@
 ///
 @mixin i18n-exclude($langs...) {
 	@each $lang in $langs {
-		$class: map-get($languageClasses, $lang);
+		$class: map-get($root-language-map, $lang);
 
 		@if $class {
 			body:not(#{$class}) & {

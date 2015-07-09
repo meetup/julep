@@ -19,7 +19,7 @@
 ///
 @mixin browser-lessThanIE( $IE_version ) {
 	@if $IE_version == 10 or $IE_version == 9 {
-		.ieRoot_lt_IE#{$IE_version} & {
+		.#{$root-browserIEPrefix}#{$IE_version} & {
 			@content;
 		}
 	} @else {

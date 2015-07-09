@@ -20,17 +20,24 @@
 
 
 // ---------------------------
-// LANGUAGE CLASSES
+// ROOT CLASSES
+// classes applied to `body`
 // ---------------------------
-$languageClasses: (
-	"en": '.lang_en',
-	"es": '.lang_es',
-	"de": '.lang_es',
-	"fr": '.lang_fr',
-	"it": '.lang_it',
-	"ja": '.lang_ja',
-	"pt": '.lang_pt'
-);
+	$root-language-map: (
+		"en": '.lang_en',
+		"es": '.lang_es',
+		"de": '.lang_es',
+		"fr": '.lang_fr',
+		"it": '.lang_it',
+		"ja": '.lang_ja',
+		"pt": '.lang_pt'
+	);
+	$root-browserIEPrefix: 'ieRoot_lt_IE'; // _[versionNumber] is appended
+
+
+// ---------------------------
+// BROWSER ROOT CLASSES
+// ---------------------------
 
 
 // ---------------------------
