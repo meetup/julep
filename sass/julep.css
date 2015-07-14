@@ -1,0 +1,80 @@
+/*
+Error: Invalid CSS after "...umColors * $n))": expected "{", was ";"
+        on line 18 of sass/functions/_color.scss
+        from line 25 of sass/julep.scss
+
+13: ///
+14: @function getGradientList( $baseColor, $numColors, $spectrum: -90deg) {
+15: 	$colorList: ();
+16: 
+17: 	@each $n in $numColors {
+18: 		append($colorList, adjust-hue($baseColor, $spectrum / $numColors * $n));
+19: 	}
+20: 
+21: 	@return $colorList;
+22: }
+
+Backtrace:
+sass/functions/_color.scss:18
+sass/julep.scss:25
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:1165:in `expected'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:1099:in `expected'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:1094:in `tok!'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:641:in `block'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:712:in `declaration_or_ruleset'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:661:in `block_child'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:650:in `block_contents'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:642:in `block'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:304:in `each_directive'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:219:in `special_directive'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:194:in `directive'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:659:in `block_child'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:653:in `block_contents'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:642:in `block'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:257:in `function_directive'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:219:in `special_directive'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:194:in `directive'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:660:in `block_child'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:650:in `block_contents'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:117:in `stylesheet'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/scss/parser.rb:42:in `parse'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/engine.rb:393:in `_to_tree'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/engine.rb:299:in `to_tree'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:313:in `block in visit_import'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/stack.rb:88:in `block in with_import'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/stack.rb:115:in `with_frame'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/stack.rb:88:in `with_import'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/stack.rb:79:in `block in with_base'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/stack.rb:115:in `with_frame'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/stack.rb:79:in `with_base'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/exec/sass_scss.rb:375:in `run'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/exec/sass_scss.rb:62:in `process_result'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/exec/base.rb:40:in `parse'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/lib/sass/exec/base.rb:19:in `parse!'
+/Users/adamd/.rbenv/versions/1.9.3-p448/lib/ruby/gems/1.9.1/gems/sass-3.4.4/bin/sass:13:in `<top (required)>'
+/Users/adamd/.rbenv/versions/1.9.3-p448/bin/sass:23:in `load'
+/Users/adamd/.rbenv/versions/1.9.3-p448/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...umColors * $n))\": expected \"{\", was \";\"\A         on line 18 of sass/functions/_color.scss\A         from line 25 of sass/julep.scss\A \A 13: ///\A 14: @function getGradientList( $baseColor, $numColors, $spectrum: -90deg) {\A 15: 	$colorList: ();\A 16: \A 17: 	@each $n in $numColors {\A 18: 		append($colorList, adjust-hue($baseColor, $spectrum / $numColors * $n));\A 19: 	}\A 20: \A 21: 	@return $colorList;\A 22: }"; }
