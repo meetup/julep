@@ -16,11 +16,15 @@ Meetup Sass utilities
 https://github.com/meetup/julep
 */
 
+// vars
 @import "config";
 
+// functions
 @import "functions/string";
 @import "functions/brightness";
+@import "functions/color";
 
+// helpers with dependencies
 @import "helpers/browser";
 @import "helpers/breakpoint";
 @import "helpers/a11y";
@@ -28,6 +32,7 @@ https://github.com/meetup/julep
 @import "helpers/selector";
 @import "helpers/pcv-modifier";
 
+// helpers
 @import "helpers/background";
 @import "helpers/color";
 @import "helpers/float";
