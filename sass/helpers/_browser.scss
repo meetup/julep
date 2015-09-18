@@ -27,3 +27,17 @@
 	}
 }
 
+
+/// Applies styles contained in content directive
+/// to "modern" browsers only (excludes IE versions less than 10).
+///
+/// @example scss
+/// 	.myClass {
+/// 		@include browser-modern() { ...applies to all browsers except IE 9 and below... }
+/// 	}
+///
+@mixin browser-modern() {
+	.ieRoot_modern & {
+		@content;
+	}
+}

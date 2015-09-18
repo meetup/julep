@@ -1,6 +1,6 @@
 {
   "name": "julep",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Meetup Sass Utilities",
   "main": [
     "sass/julep.scss"
