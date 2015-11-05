@@ -32,7 +32,7 @@
 		"ja": '.lang_ja',
 		"pt": '.lang_pt'
 	);
-	$root-browserIEPrefix: 'ieRoot_lt_IE'; // _[versionNumber] is appended
+	$root-browserIEPrefix: 'ieRoot_'; // _[lt/gt]_[versionNumber] is appended
 
 
 // ---------------------------
