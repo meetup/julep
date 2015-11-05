@@ -21,3 +21,20 @@
 	margin-left: -($elementWidth/2);
 }
 
+
+/// Absolutely positions selected element
+/// and stretches it to fill the viewport
+///
+/// @example scss
+/// 	.myOverlay {
+/// 		@include fullScreenAbsolute();
+/// 		background-color: rgba(0,0,0,0.7);
+/// 	}
+///
+@mixin fullScreenAbsolute() {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	left: 0;
+}
