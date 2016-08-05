@@ -15,11 +15,14 @@
 /// 	}
 ///
 @mixin color-svg($color: black, $isImportant:false) {
-	stroke: transparent;
-	@if $isImportant {
-		fill: $color !important;
-	} @else {
-		fill: $color;
+	&,
+	& svg {
+		stroke: transparent;
+		@if $isImportant {
+			fill: $color !important;
+		} @else {
+			fill: $color;
+		}
 	}
 };
 
