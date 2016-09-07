@@ -1,0 +1,88 @@
+////
+/// @group lock
+////
+
+
+// TODO: doc this
+// returns a `calc()` value
+//
+// http://blog.typekit.com/2016/08/17/flexible-typography-with-css-locks/
+// http://fvsch.com/code/css-locks/
+@function _lock-getCalcValue( $valMin, $valMax, $viewMin, $viewMax ) {
+	$_slope: ( $valMax - $valMin ) / ( $viewMax - $viewMin );
+	$_valInitial: $valMin - $_slope * $viewMin;
+	@return calc( $_slope * 100vw + $_valInitial );
+}
+
+@mixin lock-generate( $property, $value_min, $value_max, $bp_lockStart, $bp_lockEnd ) {
+	& {
+		#{$property}: $value_min;
+
+		@include atMediaUp($bp_lockStart) {
+			#{$property}: _lock-getCalcValue($value_min, $value_max);
+		}
+
+		@include atMediaUp($bp_lockEnd) {
+			#{$property}: $value_max;
+		}
+	}
+}
+
+@mixin lock-fontSize( $value_min, $value_max, $bp_lockStart, $bp_lockEnd ) {
+	@include lock-generate(
+		font-size,
+		$value_min,
+		$value_max,
+		$bp_lockStart,
+		$bp_lockEnd
+	);
+}
+
+h1 {
+	@include lock-fontSize( 20px, 40px, "small", "medium" );
+}
+
+
+/// Sets properties to color SVG icons
+/// @access public
+///
+/// @param {color} $color - keyword, hex, rgba, rgb, or hsl color
+/// @param {Boolean} $isImportant
+///
+/// @example scss
+/// 	.someSVG {
+/// 		@include color-svg(pink);
+/// 	}
+///
+@mixin color-svg($color: black, $isImportant:false) {
+	&,
+	& svg {
+		stroke: transparent;
+		@if $isImportant {
+			fill: $color !important;
+		} @else {
+			fill: $color;
+		}
+	}
+};
+
+
+/// Sets properties to color SVG icons AND text
+/// @access public
+///
+/// @param {color} $color - keyword, hex, rgba, rgb, or hsl color
+/// @param {Boolean} $isImportant
+///
+/// @example scss
+/// 	.someSVG {
+/// 		@include color-all(black);
+/// 	}
+///
+@mixin color-all($color: black, $isImportant:false) {
+	@include color-svg($color, $isImportant);
+	@if $isImportant {
+		color: $color !important;
+	} @else {
+		color: $color;
+	}
+};
