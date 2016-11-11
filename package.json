@@ -1,6 +1,6 @@
 {
 	"name": "julep",
-	"version": "1.4.5",
+	"version": "1.4.6",
 	"description": "Sass utility add-on for Bourbon",
 	"directories": {
 		"doc": "sassdoc/",
