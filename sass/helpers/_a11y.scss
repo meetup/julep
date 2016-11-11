@@ -22,8 +22,7 @@
 		width: 1px;
 		height: 1px;
 	} @else {
-		clip: auto;
-		clip: rect(auto auto auto auto);
+		clip: initial;
 		position: static;
 		overflow: visible;
 		margin: 0;
